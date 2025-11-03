@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume to Word Template Parser</h1>
+        
+        <div class="upload-section">
+            <label for="pdf-upload" class="upload-label">
+                <span class="upload-icon">📄</span>
+                <span>Upload PDF Resume</span>
+            </label>
+            <input type="file" id="pdf-upload" accept=".pdf" />
+            <div id="file-name"></div>
+        </div>
+
+        <div class="api-section">
+            <label for="api-key">OpenAI API Key:</label>
+            <input type="password" id="api-key" placeholder="sk-..." />
+        </div>
+
+        <button id="process-btn" disabled>Process Resume</button>
+
+        <div id="status"></div>
+        <div id="preview"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
